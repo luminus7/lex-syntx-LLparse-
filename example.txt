@@ -1,0 +1,16 @@
+struct test_node{
+	int key;
+	char name;
+	struct rb_node rb;	//containing rbt color property and pointers
+};
+
+struct rb_root root = RB_ROOT; 
+struct test_node *nodes = NULL;
+struct kfifo fifo;
+
+/*function prototypes*/
+void insert(struct test_node *, struct rb_root *);
+void erase(struct test_node *, struct rb_root *);
+struct test_node *search(int , struct rb_root *);
+int level_order_print(struct kfifo *, struct rb_root *);
+
